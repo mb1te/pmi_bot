@@ -23,7 +23,7 @@ async def main():
                 if message['from_id'] == UserID.KARPAEVA_JULIYA and get_chance(0.05):
                     await MessageApi.send_message(
                         peer_id=message['peer_id'],
-                        message='иди нахер',
+                        message='@yuliya_karpaeva иди замуж!',
                         forwarded_msg=[message['conversation_message_id']]
                     )
 
