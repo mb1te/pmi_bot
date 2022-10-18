@@ -20,7 +20,7 @@ async def main():
         for update in updates:
             if update['type'] == UpdateType.NEW_MESSAGE:
                 message = update['object']['message']
-                if message['from_id'] == UserID.KARPAEVA_JULIYA and get_chance(0.05):
+                if message['from_id'] == UserID.KARPAEVA_JULIYA and get_chance(0.1):
                     await MessageApi.send_message(
                         peer_id=message['peer_id'],
                         message='@yuliya_karpaeva иди замуж!',
