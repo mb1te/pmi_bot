@@ -1,10 +1,8 @@
 import json
 from random import randint
 
-import aiohttp
-
+from config import settings
 from enums import ApiEndpoints
-from settings import settings
 
 
 class MessageApi:
@@ -26,5 +24,4 @@ class MessageApi:
             }
             params['forward'] = json.dumps(jsonized)
 
-        async with aiohttp.ClientSession() as session:
-            await session.get(ApiEndpoints.SEND_MESSAGE, params=params)
+        requests.get(ApiEndpoints.SEND_MESSAGE, params=params)
